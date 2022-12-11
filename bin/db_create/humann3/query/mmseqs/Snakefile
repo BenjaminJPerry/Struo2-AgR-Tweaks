@@ -193,7 +193,7 @@ rule mmseqs_search:
         output_db = config['tmp_dir'] + 'humann3_search/hits_seqs{splitID}_db',
         tmp_dir = config['tmp_dir'] + 'humann3_search_TMP{splitID}'
     threads:
-        8
+        16
     resources:
         time = lambda wildcards, attempt: attempt ** 2 * 60 * 24 + (60 * 24),
         n = lambda wildcards, attempt, threads: threads,
