@@ -3,6 +3,6 @@ channels:
 - conda-forge
 dependencies:
 - libiconv
-- bioconda::kraken2
-- bioconda::bracken
+- kraken2=2.1.0=pl526hc9558a2_0
+- bracken=2.8=py39hc16433a_0
 
