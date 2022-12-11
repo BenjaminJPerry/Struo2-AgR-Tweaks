@@ -36,7 +36,7 @@ uniref_name: uniref90
 dmnd_name: uniref90_201901.dmnd
 # Index mapping UniRef90 clusters to UniRef50 (saves time vs re-annotating)
 ## This is skipped if annotating with UniRef50 instead of UniRef90
-cluster_idx: data/uniref50-90.pkl
+cluster_idx: data/UniRef90/uniref50-90.pkl
 
 #-- if custom NCBI/GTDB taxdump files, "Skip" if standard NCBI taxdump --#
 # Used for kraken taxonomy & metaphlan
