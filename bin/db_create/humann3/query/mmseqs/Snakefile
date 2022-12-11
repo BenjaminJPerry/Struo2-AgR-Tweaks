@@ -82,7 +82,7 @@ rule mmseqs_search_target_db_idx_create:
     conda:
         '../../../../envs/genes.yaml'
     threads:
-        8                 
+        16                 
     resources:
         time = lambda wildcards, attempt: attempt ** 2 * 60 * 12,
         n = lambda wildcards, attempt, threads: threads,
@@ -244,7 +244,7 @@ rule mmseqs_search_convertalis:
     params:
         results_db = config['tmp_dir'] + 'humann3_search/hits_seqs{splitID}_db'
     threads:
-        4
+        8
     resources:
         time = lambda wildcards, attempt: attempt ** 3 * 59,
         n = lambda wildcards, attempt, threads: threads,
