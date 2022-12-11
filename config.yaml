@@ -1,5 +1,5 @@
 #-- email notifications of pipeline success/failure (use "Skip" to deactivate) --#
-email: None
+email: ben.perry@agreseach.co.nz
 
 #-- I/O --#
 # file listing samples and associated data
@@ -16,7 +16,7 @@ taxonomy_col: 'gtdb_taxonomy'    # or 'ncbi_taxonomy'
 output_dir: tests/output/GTDBr95_n10/
 
 # temporary file directory (your username will be added automatically)
-tmp_dir: /ebio/abt3_scratch/
+tmp_dir: tmp
 
 #-- databases to create --#
 # Replace "Create" with "Skip" to skip creation of any of these
@@ -40,8 +40,8 @@ cluster_idx: data/uniref50-90.pkl
 
 #-- if custom NCBI/GTDB taxdump files, "Skip" if standard NCBI taxdump --#
 # Used for kraken taxonomy & metaphlan
-names_dmp: data/taxdump/names.dmp
-nodes_dmp: data/taxdump/nodes.dmp
+names_dmp: ../taxdump/names.dmp
+nodes_dmp: ../taxdump/nodes.dmp
 
 #-- keep intermediate files required for re-creating DBs (eg., w/ more genomes) --#
 # If "True", the intermediate files are saved to `output_dir`
@@ -59,7 +59,7 @@ params:
     build_kmer: 35
     build_read_lens:
       - 100
-      - 150
+      # - 150
   genes:
     prodigal: ""
     vsearch_per_genome: --id 0.97 --strand both --qmask none --fasta_width 0
