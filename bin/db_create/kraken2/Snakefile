@@ -150,7 +150,7 @@ rule kraken2_build:
     shell:
         """
         DB=`dirname {output.hash}`
-        kraken2-build --build --threads {threads} --db $DB 2> {log} 1>&2
+        kraken2-build --no-masking --build --threads {threads} --db $DB 2> {log} 1>&2
         """
     
 rule kraken2_db_copy:
