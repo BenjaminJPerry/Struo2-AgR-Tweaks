@@ -118,7 +118,7 @@ rule kraken2_build_add:
         DB=`dirname $DB`
 
         kraken2-build --threads {threads} \
-          --db $DB --add-to-library {input.fasta} \
+          --db $DB --add-to-library --no-masking {input.fasta} \
           2> {log} 1>&2
         touch {output.done} 2>> {log}
         """
