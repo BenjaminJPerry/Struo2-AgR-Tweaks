@@ -22,8 +22,8 @@ tmp_dir: tmp
 # Replace "Create" with "Skip" to skip creation of any of these
 # Note that braken relies on the kraken2 database
 databases:
-  kraken2: Create
-  bracken: Create
+  kraken2: Skip
+  bracken: Skip
   genes: Create
   humann3_bowtie2: Create
   humann3_diamond: Create
